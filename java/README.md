@@ -9,7 +9,7 @@ _Note: This Java app was created using Maven_
 mvn clean package -DskipTests
 ```
 ```
-mvn exec:java -Dexec.mainClass=com.vaultpoc.app.App
+mvn exec:java -Dexec.mainClass=com.example.vaultpoc.VaultPOC
 ```
 _Expected Output_
 ```shell
