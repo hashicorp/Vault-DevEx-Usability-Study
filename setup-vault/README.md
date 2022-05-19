@@ -20,4 +20,4 @@ _This is a **development server** and does not reflect how to operate Vault in a
 | AppRole ID        | approle-demo-readonly  |
 | AppRole Secret ID | -- shown on startup -- |
 
-[Back To The Scenario](../../README.md)
+[Back To The Scenario](../README.md)
