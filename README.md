@@ -9,9 +9,6 @@ A starting point has been created in five languages:
  - [Python](./python/README.md) - Found in `python/`
  - [Ruby](./ruby/README.md) - Found in `ruby/`  
 
-A few options exist for creating a Vault instance suitable for this exercise
- - [Setting Up Vault](./setup-vault/README.md) - Found in `setup-vault/`
-
 ## Scenario
 Your company’s engineering team is looking into ways to increase the security of your apps and
 infrastructure. You’ve heard Vault is a great solution for secret management and would like to give
