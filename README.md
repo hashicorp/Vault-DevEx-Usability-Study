@@ -20,8 +20,7 @@ Each language will operate off the same key information to access Vault; at mini
 Vault's address, a way to authenticate your application and the path where the secret is stored. We've provided all
 of this information in the [Setting Up Vault](./setup-vault/README.md) readme.
 
-### Stumped?
-[Vault's documentation](https://www.vaultproject.io/docs) is a great place to start and we're here to help!  
-Email our team with any questions (design, engineering, product, and research) at [vault-diary-study@hashicorp.com](mailto:vault-diary-study@hashicorp.com)
+### More Information
+[Vault's documentation](https://www.vaultproject.io/docs) is a great place to start!
 
 _Enjoy!_ 
