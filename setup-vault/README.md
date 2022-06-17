@@ -11,13 +11,15 @@ cd setup-vault
 docker build -t explore-vault . # build the image and tag it "explore-vault"
 docker run --rm -p 8200:8200 explore-vault # expose port 8200 and run container in background
 ```
-|                   | Value                  |
-|-------------------|------------------------|
-| Vault Address     | http://localhost:8200  |
-| Secret Path       | secret/firstsecret     |
-| Secret Key        | sample_secret          |
-| Read-Only Token   | demo-read-only         |
-| AppRole ID        | approle-demo-readonly  |
-| AppRole Secret ID | -- shown on startup -- |
+|                    | Value                  |
+|--------------------|------------------------|
+| Vault Address      | http://localhost:8200  |
+| Secret Engine      | KV-v2                  |
+| Secret Mount Point | secret                 |
+| Secret Path        | firstsecret            |
+| Secret Key         | sample_secret          |
+| Read-Only Token    | demo-read-only         |
+| AppRole ID         | approle-demo-readonly  |
+| AppRole Secret ID  | -- shown on startup -- |
 
 [Back To The Scenario](../README.md)
