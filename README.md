@@ -17,10 +17,33 @@ script with Vault. Your simple test aims to replace a hardcoded value with one r
 
 ### Key Information
 Each language will operate off the same key information to access Vault; at minimum you'll need to know
-Vault's address, a way to authenticate your application and the path where the secret is stored. We've provided all
-of this information in the [Setting Up Vault](./setup-vault/README.md) readme.
+Vault's address, a way to authenticate your application and the path where the secret is stored.
 
 ### More Information
 [Vault's documentation](https://www.vaultproject.io/docs) is a great place to start!
+
+### Local Docker Vault Details
+We've provided a containerized Vault server that includes everything needed to do this exercise.  
+
+Creating the bootstrapped Vault image and running it:
+```shell
+cd setup-vault
+docker build -t explore-vault . # build the image and tag it "explore-vault"
+docker run --rm -p 8200:8200 explore-vault # expose port 8200 and run container
+```
+The above will yeild a Vault server with the following attributes:
+
+|                    | Value                  |
+|--------------------|------------------------|
+| Vault Address      | http://localhost:8200  |
+| Secret Engine      | KV-v2                  |
+| Secret Mount Point | secret                 |
+| Secret Path        | firstsecret            |
+| Secret Key         | sample_secret          |
+| Read-Only Token    | demo-read-only         |
+| AppRole ID         | approle-demo-readonly  |
+| AppRole Secret ID  | -- shown on startup -- |
+
+More information in the [Setting Up Vault](./setup-vault/README.md) readme.
 
 _Enjoy!_ 
