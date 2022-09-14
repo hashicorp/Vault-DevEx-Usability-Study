@@ -26,3 +26,5 @@ java/target
 *.zip
 *.tar.gz
 *.rar
+
+.env
