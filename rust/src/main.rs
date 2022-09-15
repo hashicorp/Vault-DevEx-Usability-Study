@@ -2,6 +2,13 @@ use std::env;
 
 use hashicorp_vault;
 
+use serde::{Serialize, Deserialize};
+
+#[derive(Debug, Deserialize, Serialize)]
+struct MySecret {
+    sample_secret: String,
+}
+
 fn main() -> Result<(), hashicorp_vault::Error> {
     let vault_address = env::var("VAULT_ADDR").expect("VAULT_ADDR must be set");
     assert!(!vault_address.is_empty());
@@ -11,10 +18,16 @@ fn main() -> Result<(), hashicorp_vault::Error> {
 
     let vault_client = hashicorp_vault::Client::new(vault_address, vault_token)?;
 
-    match vault_client.get_secret("firstsecret") {
-        Ok(secret) => println!("{}", secret),
-        Err(err) => eprintln!("Error getting secret: {}", err),
-    }
+    let secret: Result<MySecret, hashicorp_vault::Error> = vault_client.get_custom_secret("firstsecret");
 
-    Ok(())
+    match secret {
+        Ok(my_secret) => {
+            println!("{}", my_secret.sample_secret);
+            Ok(())
+        },
+        Err(err) => {
+            eprintln!("error fetching secret: {}", err);
+            Err(err)
+        },
+    }
 }
