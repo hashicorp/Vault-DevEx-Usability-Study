@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MIT
+
 FROM vault:latest
 
 COPY entrypoint.sh /vault/entrypoint.sh

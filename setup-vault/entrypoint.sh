@@ -1,4 +1,7 @@
 #!/bin/sh
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MIT
+
 
 ###############################################################################################
 ##               *** WARNING - INSECURE - DO NOT USE IN PRODUCTION ***                       ##
