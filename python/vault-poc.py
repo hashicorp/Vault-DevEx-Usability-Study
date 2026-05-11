@@ -1,4 +1,4 @@
-# Copyright IBM Corp. 2022, 2023
+# Copyright IBM Corp. 2022, 2026
 # SPDX-License-Identifier: MIT
 
 #TODO HC-DevEx-2022: Replace `sample_secret` with secret fetched from Vault
